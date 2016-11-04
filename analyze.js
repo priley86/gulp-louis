@@ -36,7 +36,7 @@ function analyze(options, callback){
 
   command = buildCommand(options);
 
-  exec(command + ' --reporter=json > ' + options.outputFileName, function(error, stdout, stderr){
+  exec(command + ' --analyze-css --reporter=json:pretty > ' + options.outputFileName, function(error, stdout, stderr){
     if(error !== null){
       console.log(error);
       return false;
